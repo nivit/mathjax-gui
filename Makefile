@@ -52,6 +52,5 @@ clean:
 	    ${.CURDIR}/lib/jquery/editor-formule.js \
 	    ${.CURDIR}/lib/jquery/editor-formule.min.js
 .for d in assets/images
-	${FIND} ${.CURDIR}/${d} -type f -mindepth 2 -name "*.png" -delete
-	${FIND} ${.CURDIR}/${d} -type d -mindepth 1 -name "*" -delete
+	${FIND} ${.CURDIR}/${d} -type f -name "*.png" -delete
 .endfor
