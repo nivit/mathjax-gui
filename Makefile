@@ -1,7 +1,6 @@
 CSSFILES= editor-formule-before.css editor-formule-img.css editor-formule-after.css
-SVNROOT=	${HOME}/prog/xp-dev.com/matematicamente
 VERSION=$$(cat version.txt)
-GENERATORDIR=	"${SVNROOT}/formulator-images-generator/branches/formulator-images-sprite-generator-ng"
+GENERATORDIR=	"../mathjax-gui-images-generator"
 FIND=	/usr/bin/find
 FILES= index-before-panels.html index-panels.html index-after-panels.html
 HTMLCOMPRESSOR=	/usr/local/bin/htmlcompressor
