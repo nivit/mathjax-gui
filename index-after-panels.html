@@ -1,0 +1,139 @@
+            <ul class="lavaLampNoImage">
+                <li>
+                    <a id="editor-formule-cancel-button" class="selectors" href="#">Cancella</a>
+                </li>
+                <li>
+                    <a id="editor-formule-insert-button" class="selectors" href="#">Inserisci</a>
+                </li>
+                <li>
+                    <a id="editor-formule-options-button" class="selectors" href="#">Opzioni</a>
+                </li>
+            </ul>
+            <p id="editor-formule-preview-header">
+                Anteprima:
+            </p>
+            <div id="editor-formule-preview-container">
+                <div id="editor-formule-preview" class="wraptocenter">
+                \({}\)
+                </div>
+            </div>
+            <p id="editor-formule-code-header">
+                Codice:
+            </p>
+            <textarea id="editor-formule-code" cols="30" rows="5" onkeyup="UpdateMath(this.value, syntax)" onchange="UpdateMath(this.value, syntax)">
+            </textarea>
+            <div id="editor-formule-options">
+                <p>
+                    Opzioni:
+                </p>
+                <div id="options-container">
+                    <input id="editor-formule-option-syntax-asciimathml" type="radio" name="syntax" value="asciimathml" /><span>&nbsp;sintassi ASCIIMathML</span>
+                    <br/>
+                    <input id="editor-formule-option-syntax-latex" type="radio" name="syntax" value="latex" /><span>&nbsp;sintassi LaTeX</span>
+                    <br/>
+                    <input type="checkbox" id="editor-formule-option-tags" name="tags" value="false" /><span class="tex2jax_ignore asciimath2jax_ignore">&nbsp;con l'aggiunta dei delimitatori &#92;( ... &#92;) o &#36; ... &#36;</span>
+                </div>
+            </div>
+            <!-- W3C validators -->
+            <div id="validators">
+                <p class="validator">
+                    <a href="http://validator.w3.org/check?uri=referer"><img class="w3c-valid" src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" width="88px" height="31px" /></a>
+                </p>
+                <p class="validator">
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img class="w3c-valid" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" width="88px" height="31px" />
+                    </a>
+                </p>
+            </div>
+        </div>
+        <script type="text/x-mathjax-config">
+            //<![CDATA[
+                MathJax.Hub.Config({
+                    showProcessingMessages: false,
+                    extensions: ["tex2jax.js", "FontWarnings.js"],
+                    tex2jax: {
+                        inlineMath: [['\\(', '\\)']]
+                    },
+                    asciimath2jax: {
+                        delimiters: [['$', '$'], ['`', '`']]
+                    },
+                    "HTML-CSS": {
+                        scale: 180,
+                        styles: {
+                            ".MathJax": {
+                                color: "#A6684C",
+                                width: "50px",
+                                height: "50px",
+                                align: "center"
+                            },
+                            "#editor-formule-preview > .MathJax": {
+                                color: "#4C7BA4",
+                            }
+                        }
+                    },
+                    FontWarnings: {
+                        removeAfter: 20 * 1000
+                    }
+                });
+            //]]>
+        </script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.1-latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full">
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            (function () {
+                MathJax.Hub.Register.StartupHook("AsciiMath Jax Config",function () {
+                    var symbols = MathJax.InputJax.AsciiMath.AM.symbols;
+                    for (var i = 0, m = symbols.length; i < m; i++) {
+                        if (symbols[i].input === "phi")    {symbols[i].output = "\u03D5"}
+                        if (symbols[i].input === "varphi") {symbols[i].output = "\u03C6"; break;}
+                    }
+                });
+
+                var QUEUE = MathJax.Hub.queue;
+                var math = null;
+
+                QUEUE.Push(function () {
+                    math = MathJax.Hub.getAllJax("editor-formule-preview")[0];
+                });
+
+                window.UpdateMath = function (TeX, syntax) {
+                    var math_id;
+
+                    if (math) {
+                        math_id = math.inputID;
+
+                        if (syntax === 'latex') {
+                            syntax = 'tex';
+                        } else {
+                            syntax = 'asciimath';
+                        }
+
+                        $('#' + math_id).attr('type', 'math/' + syntax);
+                        QUEUE.Push(["Text", math, TeX]);
+                    }
+                }
+            }) ();
+        //]]>
+        </script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="lib/jquery/editor-formule.min.js">
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            var initializedEditor = false;
+
+            $(document).ready(function () {
+
+                if (initializedEditor === false) {
+                    initEditorFormule();
+                    initializedEditor = true;
+                }
+
+                $("#editor-formule-code").val('').focus();
+            })
+            //]]>
+        </script>
+    </body>
+</html>
