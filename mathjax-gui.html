@@ -1,0 +1,525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!--
+    @copyright@
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    *  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    *  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer
+    *  in the documentation and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+    BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+    SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+    OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: @version@
+    -->
+    <head>
+        <!--
+        $Revision: 1071 $
+        $Author: mordigante $
+        $URL: http://xp-dev.com/svn/matematicamente/formulator/branches/formulator-wo-imagemap-w-cycle/index.html $
+        -->
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Editor formule - Matematicamente.it</title>
+        <link type="text/css" rel="stylesheet" href="editor-formule.css" />
+    </head>
+    <body>
+        <div id="editor-formule">
+            <ul class="lavaLampNoImage">
+                <li>
+                    <a id="selector-istruzioni" class="selectors top-selectors" href="#">Istruzioni</a>
+                </li>
+                <li>
+                    <a id="selector-greek-letter" class="selectors top-selectors" href="#">Lettera</a>
+                </li>
+                <li>
+                    <a id="selector-accents-text" class="selectors top-selectors" href="#">Attributo</a>
+                </li>
+
+                <li>
+                    <a id="selector-arrow-symbols" class="selectors top-selectors" href="#">Frecce</a>
+                </li>
+                <li>
+                    <a id="selector-log-like-symbols" class="selectors top-selectors" href="#">Funzioni</a>
+                </li>
+                <li>
+                    <a id="selector-miscellaneous-symbols" class="selectors top-selectors" href="#">Simboli</a>
+                </li>
+                <li>
+                    <a id="selector-matrix" class="selectors top-selectors" href="#">Matrici</a>
+                </li>
+                <li>
+                    <a id="selector-binary-symbols" class="selectors top-selectors" href="#">Operatori</a>
+                </li>
+                <li>
+                    <a id="selector-constructions" class="selectors top-selectors" href="#">Predefiniti</a>
+                </li>
+                <li>
+                    <a id="selector-relation-symbols" class="selectors top-selectors" href="#">Relazioni</a>
+                </li>
+            </ul>
+            <div id="istruzioni" class="editor-formule-tab">
+                <ul class="istruzioni">
+                    <li>
+                        Seleziona i simboli e/o le espressioni dal menu soprastante oppure scrivi
+                        direttamente la tua formula nell'area <span class="evidenziato">Codice</span>
+                        che trovi in basso
+                    </li>
+                    <li>
+                        Il contrassegno <span class="highlighted-marker">&#63;</span>
+                        (punto di domanda) indica dove verr&agrave; inserito il successivo simbolo,
+                        numero, etc. eventualmente immesso da tastiera
+                    </li>
+                    <li>
+                        Il successivo contrassegno <span class="highlighted-marker">&#63;</span>
+                        si seleziona premendo il tasto TAB e si cancella automaticamente digitando
+                        o inserendo un'altra espressione col mouse
+                    </li>
+                    <li>
+                        Se la formula che compare in <span class="evidenziato">Anteprima</span>
+                        corrisponde a quella voluta, fai click su
+                        <span class="evidenziato">Inserisci</span> (nel messaggio del forum)
+                    </li>
+                    <li>
+                        Se vuoi ricominciare da capo oppure inserire una nuova espressione, fai click
+                        su <span class="evidenziato">Cancella</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Greek letter -->
+            <div id="greek-letter" class="editor-formule-tab">
+                <img id="gr00" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\alpha" title="\alpha" width="1" height="1" />
+                <img id="gr01" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\beta" title="\beta" width="1" height="1" />
+                <img id="gr02" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\gamma" title="\gamma" width="1" height="1" />
+                <img id="gr03" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\delta" title="\delta" width="1" height="1" />
+                <img id="gr04" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\epsilon" title="\epsilon" width="1" height="1" />
+                <img id="gr05" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varepsilon" title="\varepsilon" width="1" height="1" />
+                <img id="gr06" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\zeta" title="\zeta" width="1" height="1" />
+                <img id="gr07" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\eta" title="\eta" width="1" height="1" />
+                <img id="gr08" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\vartheta" title="\vartheta" width="1" height="1" />
+                <img id="gr09" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\iota" title="\iota" width="1" height="1" />
+                <img id="gr10" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\kappa" title="\kappa" width="1" height="1" />
+                <img id="gr11" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\lambda" title="\lambda" width="1" height="1" />
+                <img id="gr12" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\mu" title="\mu" width="1" height="1" />
+                <img id="gr13" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\nu" title="\nu" width="1" height="1" />
+                <img id="gr14" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\xi" title="\xi" width="1" height="1" />
+                <img id="gr15" class="cat-greek-letter" src="assets/images/1x1.gif" alt="o" title="o" width="1" height="1" />
+                <img id="gr16" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\pi" title="\pi" width="1" height="1" />
+                <img id="gr17" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varpi" title="\varpi" width="1" height="1" />
+                <img id="gr18" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\rho" title="\rho" width="1" height="1" />
+                <img id="gr19" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varrho" title="\varrho" width="1" height="1" />
+                <img id="gr20" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\sigma" title="\sigma" width="1" height="1" />
+                <img id="gr21" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varsigma" title="\varsigma" width="1" height="1" />
+                <img id="gr22" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\tau" title="\tau" width="1" height="1" />
+                <img id="gr23" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\upsilon" title="\upsilon" width="1" height="1" />
+                <img id="gr24" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\phi" title="\phi" width="1" height="1" />
+                <img id="gr25" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varphi" title="\varphi" width="1" height="1" />
+                <img id="gr26" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\chi" title="\chi" width="1" height="1" />
+                <img id="gr27" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\psi" title="\psi" width="1" height="1" />
+                <img id="gr28" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\omega" title="\omega" width="1" height="1" />
+                <img id="gr29" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Gamma" title="\Gamma" width="1" height="1" />
+                <img id="gr30" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Delta" title="\Delta" width="1" height="1" />
+                <img id="gr31" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Theta" title="\Theta" width="1" height="1" />
+                <img id="gr32" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Lambda" title="\Lambda" width="1" height="1" />
+                <img id="gr33" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Xi" title="\Xi" width="1" height="1" />
+                <img id="gr34" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Pi" title="\Pi" width="1" height="1" />
+                <img id="gr35" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Sigma" title="\Sigma" width="1" height="1" />
+                <img id="gr36" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Upsilon" title="\Upsilon" width="1" height="1" />
+                <img id="gr37" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Phi" title="\Phi" width="1" height="1" />
+                <img id="gr38" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Psi" title="\Psi" width="1" height="1" />
+                <img id="gr39" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\Omega" title="\Omega" width="1" height="1" />
+                <img id="gr40" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\digamma" title="\digamma" width="1" height="1" />
+                <img id="gr41" class="cat-greek-letter" src="assets/images/1x1.gif" alt="\varkappa" title="\varkappa" width="1" height="1" />
+            </div>
+            <!-- Miscellaneous symbols -->
+            <div id="miscellaneous-symbols" class="editor-formule-tab">
+                <img id="mi00" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\ldots" title="\ldots" width="1" height="1" />
+                <img id="mi01" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\aleph" title="\aleph" width="1" height="1" />
+                <img id="mi02" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\hbar" title="\hbar" width="1" height="1" />
+                <img id="mi03" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\imath" title="\imath" width="1" height="1" />
+                <img id="mi04" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\jmath" title="\jmath" width="1" height="1" />
+                <img id="mi05" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\ell" title="\ell" width="1" height="1" />
+                <img id="mi06" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\wp" title="\wp" width="1" height="1" />
+                <img id="mi07" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\Re" title="\Re" width="1" height="1" />
+                <img id="mi08" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\Im" title="\Im" width="1" height="1" />
+                <img id="mi09" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\mho" title="\mho" width="1" height="1" />
+                <img id="mi10" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\cdots" title="\cdots" width="1" height="1" />
+                <img id="mi11" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\prime" title="\prime" width="1" height="1" />
+                <img id="mi12" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\emptyset" title="\emptyset" width="1" height="1" />
+                <img id="mi13" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\nabla" title="\nabla" width="1" height="1" />
+                <img id="mi14" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\surd" title="\surd" width="1" height="1" />
+                <img id="mi15" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\top" title="\top" width="1" height="1" />
+                <img id="mi16" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\bot" title="\bot" width="1" height="1" />
+                <img id="mi17" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\|" title="\|" width="1" height="1" />
+                <img id="mi18" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\angle" title="\angle" width="1" height="1" />
+                <img id="mi19" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\vdots" title="\vdots" width="1" height="1" />
+                <img id="mi20" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\forall" title="\forall" width="1" height="1" />
+                <img id="mi21" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\exists" title="\exists" width="1" height="1" />
+                <img id="mi22" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\neg" title="\neg" width="1" height="1" />
+                <img id="mi23" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\flat" title="\flat" width="1" height="1" />
+                <img id="mi24" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\natural" title="\natural" width="1" height="1" />
+                <img id="mi25" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\sharp" title="\sharp" width="1" height="1" />
+                <img id="mi26" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\partial" title="\partial" width="1" height="1" />
+                <img id="mi27" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\ddots" title="\ddots" width="1" height="1" />
+                <img id="mi28" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\infty" title="\infty" width="1" height="1" />
+                <img id="mi29" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\Box" title="\Box" width="1" height="1" />
+                <img id="mi30" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\Diamond" title="\Diamond" width="1" height="1" />
+                <img id="mi31" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\triangle" title="\triangle" width="1" height="1" />
+                <img id="mi32" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\clubsuit" title="\clubsuit" width="1" height="1" />
+                <img id="mi33" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\diamondsuit" title="\diamondsuit" width="1" height="1" />
+                <img id="mi34" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\heartsuit" title="\heartsuit" width="1" height="1" />
+                <img id="mi35" class="cat-miscellaneous-symbols" src="assets/images/1x1.gif" alt="\spadesuit" title="\spadesuit" width="1" height="1" />
+            </div>
+            <!-- Binary symbols -->
+            <div id="binary-symbols" class="editor-formule-tab">
+                <img id="bi00" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\pm" title="\pm" width="1" height="1" />
+                <img id="bi01" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\mp" title="\mp" width="1" height="1" />
+                <img id="bi02" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\times" title="\times" width="1" height="1" />
+                <img id="bi03" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\div" title="\div" width="1" height="1" />
+                <img id="bi04" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\ast" title="\ast" width="1" height="1" />
+                <img id="bi05" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\star" title="\star" width="1" height="1" />
+                <img id="bi06" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\circ" title="\circ" width="1" height="1" />
+                <img id="bi07" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\bullet" title="\bullet" width="1" height="1" />
+                <img id="bi08" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\cdot" title="\cdot" width="1" height="1" />
+                <img id="bi09" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="+" title="+" width="1" height="1" />
+                <img id="bi10" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\cap" title="\cap" width="1" height="1" />
+                <img id="bi11" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\cup" title="\cup" width="1" height="1" />
+                <img id="bi12" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\uplus" title="\uplus" width="1" height="1" />
+                <img id="bi13" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\sqcap" title="\sqcap" width="1" height="1" />
+                <img id="bi14" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\sqcup" title="\sqcup" width="1" height="1" />
+                <img id="bi15" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\vee" title="\vee" width="1" height="1" />
+                <img id="bi16" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\wedge" title="\wedge" width="1" height="1" />
+                <img id="bi17" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\setminus" title="\setminus" width="1" height="1" />
+                <img id="bi18" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\wr" title="\wr" width="1" height="1" />
+                <img id="bi19" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="-" title="-" width="1" height="1" />
+                <img id="bi20" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\diamond" title="\diamond" width="1" height="1" />
+                <img id="bi21" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\bigtriangleup" title="\bigtriangleup" width="1" height="1" />
+                <img id="bi22" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\bigtriangledown" title="\bigtriangledown" width="1" height="1" />
+                <img id="bi23" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\triangleleft" title="\triangleleft" width="1" height="1" />
+                <img id="bi24" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\triangleright" title="\triangleright" width="1" height="1" />
+                <img id="bi25" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\lhd" title="\lhd" width="1" height="1" />
+                <img id="bi26" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\rhd" title="\rhd" width="1" height="1" />
+                <img id="bi27" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\unlhd" title="\unlhd" width="1" height="1" />
+                <img id="bi28" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\unrhd" title="\unrhd" width="1" height="1" />
+                <img id="bi29" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\oplus" title="\oplus" width="1" height="1" />
+                <img id="bi30" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\ominus" title="\ominus" width="1" height="1" />
+                <img id="bi31" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\otimes" title="\otimes" width="1" height="1" />
+                <img id="bi32" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\oslash" title="\oslash" width="1" height="1" />
+                <img id="bi33" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\odot" title="\odot" width="1" height="1" />
+                <img id="bi34" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\bigcirc" title="\bigcirc" width="1" height="1" />
+                <img id="bi35" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\dagger" title="\dagger" width="1" height="1" />
+                <img id="bi36" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\ddagger" title="\ddagger" width="1" height="1" />
+                <img id="bi37" class="cat-binary-symbols" src="assets/images/1x1.gif" alt="\amalg" title="\amalg" width="1" height="1" />
+            </div>
+            <!-- Relation symbols -->
+            <div id="relation-symbols" class="editor-formule-tab">
+                <img id="re00" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\leq" title="\leq" width="1" height="1" />
+                <img id="re01" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\prec" title="\prec" width="1" height="1" />
+                <img id="re02" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\preceq" title="\preceq" width="1" height="1" />
+                <img id="re03" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\ll" title="\ll" width="1" height="1" />
+                <img id="re04" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\subset" title="\subset" width="1" height="1" />
+                <img id="re05" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\subseteq" title="\subseteq" width="1" height="1" />
+                <img id="re06" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\sqsubset" title="\sqsubset" width="1" height="1" />
+                <img id="re07" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\sqsubseteq" title="\sqsubseteq" width="1" height="1" />
+                <img id="re08" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\in" title="\in" width="1" height="1" />
+                <img id="re09" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\vdash" title="\vdash" width="1" height="1" />
+                <img id="re10" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\geq" title="\geq" width="1" height="1" />
+                <img id="re11" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\succ" title="\succ" width="1" height="1" />
+                <img id="re12" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\succeq" title="\succeq" width="1" height="1" />
+                <img id="re13" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\gg" title="\gg" width="1" height="1" />
+                <img id="re14" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\supset" title="\supset" width="1" height="1" />
+                <img id="re15" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\supseteq" title="\supseteq" width="1" height="1" />
+                <img id="re16" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\sqsupset" title="\sqsupset" width="1" height="1" />
+                <img id="re17" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\sqsupseteq" title="\sqsupseteq" width="1" height="1" />
+                <img id="re18" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\ni" title="\ni" width="1" height="1" />
+                <img id="re19" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\dashv" title="\dashv" width="1" height="1" />
+                <img id="re20" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\equiv" title="\equiv" width="1" height="1" />
+                <img id="re21" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\sim" title="\sim" width="1" height="1" />
+                <img id="re22" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\simeq" title="\simeq" width="1" height="1" />
+                <img id="re23" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\asymp" title="\asymp" width="1" height="1" />
+                <img id="re24" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\approx" title="\approx" width="1" height="1" />
+                <img id="re25" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\cong" title="\cong" width="1" height="1" />
+                <img id="re26" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\neq" title="\neq" width="1" height="1" />
+                <img id="re27" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\doteq" title="\doteq" width="1" height="1" />
+                <img id="re28" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\propto" title="\propto" width="1" height="1" />
+                <img id="re29" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="&lt;" title="&lt;" width="1" height="1" />
+                <img id="re30" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\models" title="\models" width="1" height="1" />
+                <img id="re31" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\perp" title="\perp" width="1" height="1" />
+                <img id="re32" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\mid" title="\mid" width="1" height="1" />
+                <img id="re33" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\parallel" title="\parallel" width="1" height="1" />
+                <img id="re34" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\bowtie" title="\bowtie" width="1" height="1" />
+                <img id="re35" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\Join" title="\Join" width="1" height="1" />
+                <img id="re36" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\smile" title="\smile" width="1" height="1" />
+                <img id="re37" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="\frown" title="\frown" width="1" height="1" />
+                <img id="re38" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="=" title="=" width="1" height="1" />
+                <img id="re39" class="cat-relation-symbols" src="assets/images/1x1.gif" alt="&gt;" title="&gt;" width="1" height="1" />
+            </div>
+            <!-- Matrix -->
+            <div id="matrix" class="editor-formule-tab">
+                <img id="ma00" class="cat-matrix" src="assets/images/1x1.gif" alt="\begin{matrix} 1 &amp; 2 \\ 3  &amp; 4 \end{matrix}" title="\begin{matrix} 1 &amp; 2 \\ 3  &amp; 4 \end{matrix}" width="1" height="1" />
+                <img id="ma01" class="cat-matrix" src="assets/images/1x1.gif" alt="\begin{vmatrix} w &amp; x \\ y &amp; z \end{vmatrix}" title="\begin{vmatrix} w &amp; x \\ y &amp; z \end{vmatrix}" width="1" height="1" />
+                <img id="ma02" class="cat-matrix" src="assets/images/1x1.gif" alt="\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}" title="\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}" width="1" height="1" />
+                <img id="ma03" class="cat-matrix" src="assets/images/1x1.gif" alt="\begin{Vmatrix} w &amp; x \\ y &amp; z \end{Vmatrix}" title="\begin{Vmatrix} w &amp; x \\ y &amp; z \end{Vmatrix}" width="1" height="1" />
+                <img id="ma04" class="cat-matrix" src="assets/images/1x1.gif" alt="\begin{bmatrix} w &amp; x \\ y &amp; z \end{bmatrix}" title="\begin{bmatrix} w &amp; x \\ y &amp; z \end{bmatrix}" width="1" height="1" />
+            </div>
+            <!-- Accents text -->
+            <div id="accents-text" class="editor-formule-tab">
+                <img id="ac00" class="cat-accents-text" src="assets/images/1x1.gif" alt="\hat{a}" title="\hat{a}" width="1" height="1" />
+                <img id="ac01" class="cat-accents-text" src="assets/images/1x1.gif" alt="\check{a}" title="\check{a}" width="1" height="1" />
+                <img id="ac02" class="cat-accents-text" src="assets/images/1x1.gif" alt="\acute{a}" title="\acute{a}" width="1" height="1" />
+                <img id="ac03" class="cat-accents-text" src="assets/images/1x1.gif" alt="\grave{a}" title="\grave{a}" width="1" height="1" />
+                <img id="ac04" class="cat-accents-text" src="assets/images/1x1.gif" alt="\bar{a}" title="\bar{a}" width="1" height="1" />
+                <img id="ac05" class="cat-accents-text" src="assets/images/1x1.gif" alt="\vec{a}" title="\vec{a}" width="1" height="1" />
+                <img id="ac06" class="cat-accents-text" src="assets/images/1x1.gif" alt="\dot{a}" title="\dot{a}" width="1" height="1" />
+                <img id="ac07" class="cat-accents-text" src="assets/images/1x1.gif" alt="\ddot{a}" title="\ddot{a}" width="1" height="1" />
+                <img id="ac08" class="cat-accents-text" src="assets/images/1x1.gif" alt="\breve{a}" title="\breve{a}" width="1" height="1" />
+                <img id="ac09" class="cat-accents-text" src="assets/images/1x1.gif" alt="\tilde{a}" title="\tilde{a}" width="1" height="1" />
+                <img id="ac10" class="cat-accents-text" src="assets/images/1x1.gif" alt="\widetilde{abc}" title="\widetilde{abc}" width="1" height="1" />
+                <img id="ac11" class="cat-accents-text" src="assets/images/1x1.gif" alt="\overleftarrow{abc}" title="\overleftarrow{abc}" width="1" height="1" />
+                <img id="ac12" class="cat-accents-text" src="assets/images/1x1.gif" alt="\overline{abc}" title="\overline{abc}" width="1" height="1" />
+                <img id="ac13" class="cat-accents-text" src="assets/images/1x1.gif" alt="\overbrace{abc}" title="\overbrace{abc}" width="1" height="1" />
+                <img id="ac14" class="cat-accents-text" src="assets/images/1x1.gif" alt="\widehat{abc}" title="\widehat{abc}" width="1" height="1" />
+                <img id="ac15" class="cat-accents-text" src="assets/images/1x1.gif" alt="\overrightarrow{abc}" title="\overrightarrow{abc}" width="1" height="1" />
+                <img id="ac16" class="cat-accents-text" src="assets/images/1x1.gif" alt="\underline{abc}" title="\underline{abc}" width="1" height="1" />
+                <img id="ac17" class="cat-accents-text" src="assets/images/1x1.gif" alt="\underbrace{abc}" title="\underbrace{abc}" width="1" height="1" />
+                <img id="ac18" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathrm{ABC}" title="\mathrm{ABC}" width="1" height="1" />
+                <img id="ac19" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathit{ABC}" title="\mathit{ABC}" width="1" height="1" />
+                <img id="ac20" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathnormal{ABC}" title="\mathnormal{ABC}" width="1" height="1" />
+                <img id="ac21" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathcal{ABC}" title="\mathcal{ABC}" width="1" height="1" />
+                <img id="ac22" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathfrak{ABC}" title="\mathfrak{ABC}" width="1" height="1" />
+                <img id="ac23" class="cat-accents-text" src="assets/images/1x1.gif" alt="\mathbb{ABC}" title="\mathbb{ABC}" width="1" height="1" />
+            </div>
+            <!-- Log like symbols -->
+            <div id="log-like-symbols" class="editor-formule-tab">
+                <img id="lo00" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\arccos" title="\arccos" width="1" height="1" />
+                <img id="lo01" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\arcsin" title="\arcsin" width="1" height="1" />
+                <img id="lo02" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\arctan" title="\arctan" width="1" height="1" />
+                <img id="lo03" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\arg" title="\arg" width="1" height="1" />
+                <img id="lo04" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\cos" title="\cos" width="1" height="1" />
+                <img id="lo05" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\cosh" title="\cosh" width="1" height="1" />
+                <img id="lo06" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\cot" title="\cot" width="1" height="1" />
+                <img id="lo07" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\coth" title="\coth" width="1" height="1" />
+                <img id="lo08" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\csc" title="\csc" width="1" height="1" />
+                <img id="lo09" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\deg" title="\deg" width="1" height="1" />
+                <img id="lo10" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\det" title="\det" width="1" height="1" />
+                <img id="lo11" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\dim" title="\dim" width="1" height="1" />
+                <img id="lo12" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\exp" title="\exp" width="1" height="1" />
+                <img id="lo13" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\gcd" title="\gcd" width="1" height="1" />
+                <img id="lo14" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\hom" title="\hom" width="1" height="1" />
+                <img id="lo15" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\inf" title="\inf" width="1" height="1" />
+                <img id="lo16" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\ker" title="\ker" width="1" height="1" />
+                <img id="lo17" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\lg" title="\lg" width="1" height="1" />
+                <img id="lo18" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\lim" title="\lim" width="1" height="1" />
+                <img id="lo19" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\liminf" title="\liminf" width="1" height="1" />
+                <img id="lo20" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\limsup" title="\limsup" width="1" height="1" />
+                <img id="lo21" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\ln" title="\ln" width="1" height="1" />
+                <img id="lo22" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\log" title="\log" width="1" height="1" />
+                <img id="lo23" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\max" title="\max" width="1" height="1" />
+                <img id="lo24" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\min" title="\min" width="1" height="1" />
+                <img id="lo25" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\Pr" title="\Pr" width="1" height="1" />
+                <img id="lo26" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\sec" title="\sec" width="1" height="1" />
+                <img id="lo27" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\sin" title="\sin" width="1" height="1" />
+                <img id="lo28" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\sinh" title="\sinh" width="1" height="1" />
+                <img id="lo29" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\sup" title="\sup" width="1" height="1" />
+                <img id="lo30" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\tan" title="\tan" width="1" height="1" />
+                <img id="lo31" class="cat-log-like-symbols" src="assets/images/1x1.gif" alt="\tanh" title="\tanh" width="1" height="1" />
+            </div>
+            <!-- Arrow symbols -->
+            <div id="arrow-symbols" class="editor-formule-tab">
+                <img id="ar00" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\leftarrow" title="\leftarrow" width="1" height="1" />
+                <img id="ar01" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Leftarrow" title="\Leftarrow" width="1" height="1" />
+                <img id="ar02" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\rightarrow" title="\rightarrow" width="1" height="1" />
+                <img id="ar03" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Rightarrow" title="\Rightarrow" width="1" height="1" />
+                <img id="ar04" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\leftrightarrow" title="\leftrightarrow" width="1" height="1" />
+                <img id="ar05" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Leftrightarrow" title="\Leftrightarrow" width="1" height="1" />
+                <img id="ar06" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\mapsto" title="\mapsto" width="1" height="1" />
+                <img id="ar07" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\hookleftarrow" title="\hookleftarrow" width="1" height="1" />
+                <img id="ar08" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\leftharpoonup" title="\leftharpoonup" width="1" height="1" />
+                <img id="ar09" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\leftharpoondown" title="\leftharpoondown" width="1" height="1" />
+                <img id="ar10" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\rightleftharpoons" title="\rightleftharpoons" width="1" height="1" />
+                <img id="ar11" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\longleftarrow" title="\longleftarrow" width="1" height="1" />
+                <img id="ar12" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Longleftarrow" title="\Longleftarrow" width="1" height="1" />
+                <img id="ar13" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\longrightarrow" title="\longrightarrow" width="1" height="1" />
+                <img id="ar14" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Longrightarrow" title="\Longrightarrow" width="1" height="1" />
+                <img id="ar15" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\longleftrightarrow" title="\longleftrightarrow" width="1" height="1" />
+                <img id="ar16" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Longleftrightarrow" title="\Longleftrightarrow" width="1" height="1" />
+                <img id="ar17" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\longmapsto" title="\longmapsto" width="1" height="1" />
+                <img id="ar18" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\hookrightarrow" title="\hookrightarrow" width="1" height="1" />
+                <img id="ar19" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\rightharpoonup" title="\rightharpoonup" width="1" height="1" />
+                <img id="ar20" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\rightharpoondown" title="\rightharpoondown" width="1" height="1" />
+                <img id="ar21" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\leadsto" title="\leadsto" width="1" height="1" />
+                <img id="ar22" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\uparrow" title="\uparrow" width="1" height="1" />
+                <img id="ar23" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Uparrow" title="\Uparrow" width="1" height="1" />
+                <img id="ar24" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\downarrow" title="\downarrow" width="1" height="1" />
+                <img id="ar25" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Downarrow" title="\Downarrow" width="1" height="1" />
+                <img id="ar26" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\updownarrow" title="\updownarrow" width="1" height="1" />
+                <img id="ar27" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\Updownarrow" title="\Updownarrow" width="1" height="1" />
+                <img id="ar28" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\nearrow" title="\nearrow" width="1" height="1" />
+                <img id="ar29" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\searrow" title="\searrow" width="1" height="1" />
+                <img id="ar30" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\swarrow" title="\swarrow" width="1" height="1" />
+                <img id="ar31" class="cat-arrow-symbols" src="assets/images/1x1.gif" alt="\nwarrow" title="\nwarrow" width="1" height="1" />
+            </div>
+            <!-- Constructions -->
+            <div id="constructions" class="editor-formule-tab">
+                <img id="co00" class="cat-constructions" src="assets/images/1x1.gif" alt="\sqrt{2}" title="\sqrt{2}" width="1" height="1" />
+                <img id="co01" class="cat-constructions" src="assets/images/1x1.gif" alt="\begin{cases}y=f(x)\\y=g(x)\end{cases}" title="\begin{cases}y=f(x)\\y=g(x)\end{cases}" width="1" height="1" />
+                <img id="co02" class="cat-constructions" src="assets/images/1x1.gif" alt="\binom{n}{k}" title="\binom{n}{k}" width="1" height="1" />
+                <img id="co03" class="cat-constructions" src="assets/images/1x1.gif" alt="\coprod_{i = 1}^N" title="\coprod_{i = 1}^N" width="1" height="1" />
+                <img id="co04" class="cat-constructions" src="assets/images/1x1.gif" alt="\frac{\partial^{n}f}{\partial x^n}" title="\frac{\partial^{n}f}{\partial x^n}" width="1" height="1" />
+                <img id="co05" class="cat-constructions" src="assets/images/1x1.gif" alt="\iiint_{E}^{V}\, dx\, dy\, dz" title="\iiint_{E}^{V}\, dx\, dy\, dz" width="1" height="1" />
+                <img id="co06" class="cat-constructions" src="assets/images/1x1.gif" alt="\iint_{D}^{W}\, dx\, dy" title="\iint_{D}^{W}\, dx\, dy" width="1" height="1" />
+                <img id="co07" class="cat-constructions" src="assets/images/1x1.gif" alt="\int_{a}^{b} f(x)\, dx" title="\int_{a}^{b} f(x)\, dx" width="1" height="1" />
+                <img id="co08" class="cat-constructions" src="assets/images/1x1.gif" alt="\lim_{x\rightarrow y}" title="\lim_{x\rightarrow y}" width="1" height="1" />
+                <img id="co09" class="cat-constructions" src="assets/images/1x1.gif" alt="\oint_{C}" title="\oint_{C}" width="1" height="1" />
+                <img id="co10" class="cat-constructions" src="assets/images/1x1.gif" alt="\prod_{i = m}^{n}" title="\prod_{i = m}^{n}" width="1" height="1" />
+                <img id="co11" class="cat-constructions" src="assets/images/1x1.gif" alt="\sqrt[n]{\frac{x^2}{k+1}}" title="\sqrt[n]{\frac{x^2}{k+1}}" width="1" height="1" />
+                <img id="co12" class="cat-constructions" src="assets/images/1x1.gif" alt="\sum {x}" title="\sum {x}" width="1" height="1" />
+                <img id="co13" class="cat-constructions" src="assets/images/1x1.gif" alt="\sum^{b = \ldots}" title="\sum^{b = \ldots}" width="1" height="1" />
+                <img id="co14" class="cat-constructions" src="assets/images/1x1.gif" alt="\sum_{a = \ldots}" title="\sum_{a = \ldots}" width="1" height="1" />
+                <img id="co15" class="cat-constructions" src="assets/images/1x1.gif" alt="{}^{12}_{\phantom{1}6}\text{C}" title="{}^{12}_{\phantom{1}6}\text{C}" width="1" height="1" />
+            </div>
+            <ul class="lavaLampNoImage">
+                <li>
+                    <a id="editor-formule-cancel-button" class="selectors" href="#">Cancella</a>
+                </li>
+                <li>
+                    <a id="editor-formule-insert-button" class="selectors" href="#">Inserisci</a>
+                </li>
+                <li>
+                    <a id="editor-formule-options-button" class="selectors" href="#">Opzioni</a>
+                </li>
+            </ul>
+            <p id="editor-formule-preview-header">
+                Anteprima:
+            </p>
+            <div id="editor-formule-preview-container">
+                <div id="editor-formule-preview" class="wraptocenter">
+                \({}\)
+                </div>
+            </div>
+            <p id="editor-formule-code-header">
+                Codice:
+            </p>
+            <textarea id="editor-formule-code" cols="30" rows="5" onkeyup="UpdateMath(this.value, syntax)" onchange="UpdateMath(this.value, syntax)">
+            </textarea>
+            <div id="editor-formule-options">
+                <p>
+                    Opzioni:
+                </p>
+                <div id="options-container">
+                    <input id="editor-formule-option-syntax-asciimathml" type="radio" name="syntax" value="asciimathml" /><span>&nbsp;sintassi ASCIIMathML</span>
+                    <br/>
+                    <input id="editor-formule-option-syntax-latex" type="radio" name="syntax" value="latex" /><span>&nbsp;sintassi LaTeX</span>
+                    <br/>
+                    <input type="checkbox" id="editor-formule-option-tags" name="tags" value="false" /><span class="tex2jax_ignore asciimath2jax_ignore">&nbsp;con l'aggiunta dei delimitatori &#92;( ... &#92;) o &#36; ... &#36;</span>
+                </div>
+            </div>
+            <!-- W3C validators -->
+            <div id="validators">
+                <p class="validator">
+                    <a href="http://validator.w3.org/check?uri=referer"><img class="w3c-valid" src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" width="88px" height="31px" /></a>
+                </p>
+                <p class="validator">
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img class="w3c-valid" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" width="88px" height="31px" />
+                    </a>
+                </p>
+            </div>
+        </div>
+        <script type="text/x-mathjax-config">
+            //<![CDATA[
+                MathJax.Hub.Config({
+                    showProcessingMessages: false,
+                    extensions: ["tex2jax.js", "FontWarnings.js"],
+                    tex2jax: {
+                        inlineMath: [['\\(', '\\)']]
+                    },
+                    asciimath2jax: {
+                        delimiters: [['$', '$'], ['`', '`']]
+                    },
+                    "HTML-CSS": {
+                        scale: 180,
+                        styles: {
+                            ".MathJax": {
+                                color: "#A6684C",
+                                width: "50px",
+                                height: "50px",
+                                align: "center"
+                            },
+                            "#editor-formule-preview > .MathJax": {
+                                color: "#4C7BA4",
+                            }
+                        }
+                    },
+                    FontWarnings: {
+                        removeAfter: 20 * 1000
+                    }
+                });
+            //]]>
+        </script>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full">
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            (function () {
+                MathJax.Hub.Register.StartupHook("AsciiMath Jax Config",function () {
+                    var symbols = MathJax.InputJax.AsciiMath.AM.symbols;
+                    for (var i = 0, m = symbols.length; i < m; i++) {
+                        if (symbols[i].input === "phi")    {symbols[i].output = "\u03D5"}
+                        if (symbols[i].input === "varphi") {symbols[i].output = "\u03C6"; break;}
+                    }
+                });
+
+                var QUEUE = MathJax.Hub.queue;
+                var math = null;
+
+                QUEUE.Push(function () {
+                    math = MathJax.Hub.getAllJax("editor-formule-preview")[0];
+                });
+
+                window.UpdateMath = function (TeX, syntax) {
+                    var math_id;
+
+                    if (math) {
+                        math_id = math.inputID;
+
+                        if (syntax === 'latex') {
+                            syntax = 'tex';
+                        } else {
+                            syntax = 'asciimath';
+                        }
+
+                        $('#' + math_id).attr('type', 'math/' + syntax);
+                        QUEUE.Push(["Text", math, TeX]);
+                    }
+                }
+            }) ();
+        //]]>
+        </script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="lib/jquery/editor-formule.min.js">
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            var initializedEditor = false;
+
+            $(document).ready(function () {
+
+                if (initializedEditor === false) {
+                    initEditorFormule();
+                    initializedEditor = true;
+                }
+
+                $("#editor-formule-code").val('').focus();
+            })
+            //]]>
+        </script>
+    </body>
+</html>
